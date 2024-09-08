@@ -1,0 +1,213 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Security.Policy;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Topic_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = Encoding.Unicode; // для работы значения валюты
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru-RU");
+
+            // практика 1.1
+            // задание 1
+            //int a = 23, b = 43, c = 0;
+            //Console.WriteLine("Введите значение переменной a");
+            //int a = Convert.ToInt32(Console.ReadLine()); // с вводом данных через консоль
+            //Console.WriteLine("Введите значение переменной b");
+            //int b = Convert.ToInt32(Console.ReadLine());
+            //int c;
+            //Console.WriteLine("a = "+ a);
+            //Console.WriteLine("b = "+ b);
+            //c = a + b;
+            //Console.WriteLine(a + "+" + b + "=" + c);
+
+            // задание 2
+            //int a = 12, b = 34;
+            //Console.WriteLine("a = " + a);
+            //Console.WriteLine("b = " + b);
+            //Console.WriteLine(a + "+" + b + "=" + b + "+" + a);
+
+            // задание 3
+            //Console.WriteLine("Введите значение переменной a");
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Введите значение переменной b");
+            //int b = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Введите значение переменной c");
+            //int c = Convert.ToInt32(Console.ReadLine());
+            //int sum;
+            //Console.WriteLine("a = "+ a + "\n" + "b = "+ b + "\n" + "c = "+ c);
+            //sum = a + b + c;
+            //Console.WriteLine(a + "+" + b + "+" + c + "=" + sum);
+
+            // задание 4
+            //Console.WriteLine("Введите значение переменной a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение переменной b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double p;
+            //p = a * b;
+            //p = Math.Round(p, 1); // Round - округление числа до 1 знака после запятой
+            //Console.WriteLine(a + "*" + b + "=" + p);
+
+            // задание 5
+            //Console.WriteLine("Введите значение переменной a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение переменной b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double result;
+            //result = a / b;
+            //Console.WriteLine(string.Format("{0:f3}", a) + "/" + string.Format("{0:f3}", b) + "=" + string.Format("{0:f3}", result)); // string.Format("{0:f3}", a) - выводим до 3-х знаков после запятой
+
+            // задание 6
+            //Console.WriteLine("Введите значение переменной a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение переменной b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение переменной c");
+            //double c = Convert.ToDouble(Console.ReadLine());
+            //string a1 = string.Format("{0:f2}", a);
+            //string b1 = string.Format("{0:f2}", b);
+            //string c1 = string.Format("{0:f2}", c);
+            //Console.WriteLine("(" + a1 + "+" + b1 + ")" + "+" + c1 + "=" + a1 + "+" + "(" + b1 + "+" + c1 + ")");
+
+            // задание 7
+            //Console.WriteLine("Введите номинал купюры");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите количество купюр");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double sum;
+            //Console.WriteLine("Номинал купюры = " + a);
+            //Console.WriteLine("Количество купюр = " + b);
+            //sum = a * b;
+            //Console.WriteLine("Сумма денег = " + sum.ToString("C2"));
+
+            // задание 8
+            //Console.WriteLine("Введите сумму вклада = ");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите процент по вкладу = ");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double sum;
+            //sum = a * (b / 100);
+            //Console.WriteLine("Через год начислят "+ sum.ToString("C2"));
+
+            // задание 9
+            //Console.WriteLine("Введите сумму вклада = ");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите процент по вкладу = ");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double sum;
+            //sum = a + (a * (b / 100));
+            //Console.WriteLine("Через год на вкладе " + sum.ToString("C2"));
+
+            // задание 10
+            //Console.WriteLine("Как тебя зовут?");
+            //string name = Convert.ToString(Console.ReadLine());
+            //Console.WriteLine("Сколько тебе лет?");
+            //int age = Convert.ToInt32(Console.ReadLine());
+            //int year;
+            //year = 2009 - age;
+            //Console.WriteLine($"{name}, ты родился в {year} году.");
+
+            //Console.ReadKey(); 
+
+
+            // практика 1.2
+            // задание 1
+            //Console.WriteLine("Введите перемитр треугольника = ");
+            //double P = Convert.ToDouble(Console.ReadLine());
+            //double S;
+            //S = Math.Pow(P, 2) * Math.Sqrt(3) / 36;
+            //Console.WriteLine("S = "+ S);
+
+            // задание 2
+            //Console.WriteLine("Введите значение координата a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение координата b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение координата c");
+            //double c = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение координата d");
+            //double d = Convert.ToDouble(Console.ReadLine());
+            //double result;
+            //result = Math.Sqrt(Math.Pow(b - a, 2) + Math.Pow(d - c, 2));
+            //Console.WriteLine("Расстояние между точками = " + result);
+
+            // задание 3
+            //Console.WriteLine("Введите значение куба a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение куба b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double result;
+            //result = (Math.Pow(a, 3) + Math.Pow(b, 3)) / 2;
+            //Console.WriteLine("Среднее арифметическое кубов = " + result);
+
+            // задание 4
+            //Console.WriteLine("Введите значение модуля a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение модуля b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double result;
+            //result = Math.Abs((a * b) / 2);
+            //Console.WriteLine("Среднее геометрическое модулей = " + result);
+
+            // задание 5
+            //Console.WriteLine("Введите значение катета a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение катета b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double c;
+            //c = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
+            //Console.WriteLine("Гипотенуза = " + c);
+
+            // задание 6
+            //Console.WriteLine("Введите значение катета a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение гипотенузы с");
+            //double c = Convert.ToDouble(Console.ReadLine());
+            //double b;
+            //b = Math.Sqrt(Math.Pow(c, 2) - Math.Pow(a, 2));
+            //Console.WriteLine("Катет = " + b);
+
+            // задание 7
+            //Console.WriteLine("Введите значение катета a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение катета b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double S;
+            //S = a * b / 2;
+            //Console.WriteLine("Площадь прямоугольного треугольника = " + S);
+
+            // задание 8
+            //Console.WriteLine("Введите значение катета a");
+            //double a = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Введите значение катета b");
+            //double b = Convert.ToDouble(Console.ReadLine());
+            //double c, P;
+            //c = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
+            //P = a + b + c;
+            //Console.WriteLine("Периметр прямоугольного треугольника = " + P);
+
+            // задание 9
+            //Console.WriteLine("Введите значение s");
+            //double s = Convert.ToDouble(Console.ReadLine());
+            //double r;
+            //r = Math.Sqrt(s / 6);
+            //Console.WriteLine("Ребро куба = "+ r);
+
+            //Console.ReadKey();
+        }
+    }
+}
