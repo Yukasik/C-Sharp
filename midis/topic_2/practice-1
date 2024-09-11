@@ -52,36 +52,57 @@ namespace Topic_2
             //sum = a + b + c;
             //Console.WriteLine(a + "+" + b + "+" + c + "=" + sum);
 
+            // округление
+            //double x = Math.E;
+            //Console.WriteLine("E={0,10}", x);
+            //Console.WriteLine("E={0:.###}", x);
+
             // задание 4
-            //Console.WriteLine("Введите значение переменной a");
+            //Console.Write("Введите переменную a = ");
             //double a = Convert.ToDouble(Console.ReadLine());
-            //Console.WriteLine("Введите значение переменной b");
+            //Console.Write("Введите переменную b = ");
             //double b = Convert.ToDouble(Console.ReadLine());
-            //double p;
-            //p = a * b;
-            //p = Math.Round(p, 1); // Round - округление числа до 1 знака после запятой
-            //Console.WriteLine(a + "*" + b + "=" + p);
+            //double c;
+            //Console.Write("{0:.#}", a);
+            //Console.Write("*");
+            //Console.Write("{0:.#}", b);
+            //c = a * b;
+            //Console.Write("=");
+            //Console.Write("{0:.#}", c);
 
             // задание 5
-            //Console.WriteLine("Введите значение переменной a");
+            //Console.Write("Введите переменную a = ");
             //double a = Convert.ToDouble(Console.ReadLine());
-            //Console.WriteLine("Введите значение переменной b");
+            //Console.Write("Введите переменную b = ");
             //double b = Convert.ToDouble(Console.ReadLine());
-            //double result;
-            //result = a / b;
-            //Console.WriteLine(string.Format("{0:f3}", a) + "/" + string.Format("{0:f3}", b) + "=" + string.Format("{0:f3}", result)); // string.Format("{0:f3}", a) - выводим до 3-х знаков после запятой
+            //double c;
+            //Console.Write("{0:.000}", a);
+            //Console.Write("/");
+            //Console.Write("{0:.000}", b);
+            //Console.Write("=");
+            //c = a / b;
+            //Console.Write("{0:.000}", c);
 
             // задание 6
-            //Console.WriteLine("Введите значение переменной a");
+            //Console.Write("Введите переменную a = ");
             //double a = Convert.ToDouble(Console.ReadLine());
-            //Console.WriteLine("Введите значение переменной b");
+            //Console.Write("Введите переменную b = ");
             //double b = Convert.ToDouble(Console.ReadLine());
-            //Console.WriteLine("Введите значение переменной c");
+            //Console.Write("Введите переменную c = ");
             //double c = Convert.ToDouble(Console.ReadLine());
-            //string a1 = string.Format("{0:f2}", a);
-            //string b1 = string.Format("{0:f2}", b);
-            //string c1 = string.Format("{0:f2}", c);
-            //Console.WriteLine("(" + a1 + "+" + b1 + ")" + "+" + c1 + "=" + a1 + "+" + "(" + b1 + "+" + c1 + ")");
+            //Console.Write("(");
+            //Console.Write("{0:.00}", a);
+            //Console.Write("+");
+            //Console.Write("{0:.00}", b);
+            //Console.Write(")" + "+");
+            //Console.Write("{0:.00}", c);
+            //Console.Write("=");
+            //Console.Write("{0:.00}", a);
+            //Console.Write("+" + "(");
+            //Console.Write("{0:.00}", b);
+            //Console.Write("+");
+            //Console.Write("{0:.00}", c);
+            //Console.Write(")");
 
             // задание 7
             //Console.WriteLine("Введите номинал купюры");
